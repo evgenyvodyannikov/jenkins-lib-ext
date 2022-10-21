@@ -103,6 +103,8 @@ void call() {
                                             timeout(time: config.timeoutOptions.initInfoBase, unit: TimeUnit.MINUTES) {
                                                 // Инициализация и первичная миграция
                                                 initInfobase config
+
+                                                sleep(time: 2, unit: TimeUnit.MINUTES)
                                             }
                                         }
                                     }
@@ -182,7 +184,7 @@ void call() {
                         steps {
                             timeout(time: config.timeoutOptions.bdd, unit: TimeUnit.MINUTES) {
                                 unzipInfobase()
-                                
+
                                 bdd config
                             }
                         }
