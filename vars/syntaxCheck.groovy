@@ -58,7 +58,7 @@ def call(JobConfiguration config) {
     // Запуск синтакс-проверки
     VRunner.exec(command, true)
 
-    junit allowEmptyResults: true, testResults: FileUtils.getLocalPath(pathToJUnitReport)
+    junit allowEmptyResults: true, skipPublishingChecks: true, testResults: FileUtils.getLocalPath(pathToJUnitReport)
 
     archiveArtifacts FileUtils.getLocalPath(pathToJUnitReport)
 }
