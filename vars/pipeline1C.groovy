@@ -182,7 +182,7 @@ void call() {
                         steps {
                             timeout(time: config.timeoutOptions.bdd, unit: TimeUnit.MINUTES) {
                                 unzipInfobase()
-
+                                
                                 bdd config
                             }
                         }
