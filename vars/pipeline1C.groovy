@@ -201,8 +201,6 @@ void call() {
                         steps {
                             timeout(time: config.timeoutOptions.syntaxCheck, unit: TimeUnit.MINUTES) {
                                 syntaxCheck config
-
-                                junit './build/out/jUnit/syntax.xml'
                             }
                         }
                     }
